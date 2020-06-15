@@ -1,0 +1,89 @@
+main p {
+	text-align: justify;
+	margin: 20px;}
+	p::first-letter {
+		padding-left: 2rem;}
+
+main {
+	padding-top: 80px;}
+
+section {
+	width: 70%;
+	margin: 20px auto;
+	height: 200px;
+	display: flex;
+	overflow: hidden;
+	flex-direction: row;}
+	section:nth-child(odd) {
+		background-color: lightgrey;}
+	section:nth-child(even) {
+		background-color: #ededed;
+		flex-direction: row-reverse;}
+	section > a {
+		height: 200px;}
+		section > a > img {
+			height: 200px;
+			width: auto;
+			transition: transform 2s ease;}
+		section > a > img:hover {
+			transform: scale(1.2);}
+	section > div {
+		z-index: 0;
+		box-sizing: border-box;
+		height: 200px;
+		overflow: hidden;
+		padding-top: 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;}
+		section > div > a {
+			width: fit-content;
+			color: black;
+			align-self: center;
+			text-decoration: none;}
+			section > div > a > h1:hover {
+				color: grey;}
+			section > div > p {
+				font-size: 18px;}
+	/*section:hover {
+		box-shadow: 0 0 15px 1px grey;}*/
+
+.dark-mode {
+	background-color: black;}
+	.dark-mode main * {
+		color: white;}
+		.dark-mode section:nth-child(odd) {
+			background-color: #303030;}
+		.dark-mode section:nth-child(even) {
+			background-color: #505050;}
+			.dark-mode section > div > a > h1:hover {
+				color: grey;}
+
+
+@media only screen and (max-width: 1160px) {
+	section {
+		width: 90%;}
+}
+
+@media only screen and (max-width: 910px) {
+	section {
+		flex-direction: column;
+		height: auto;
+		overflow: hidden;
+		border-radius: 15px;}
+	section:nth-child(even) {
+		flex-direction: column;}
+	section > a {
+		height: auto;
+		margin: 0px auto;
+		max-width: 100%;}
+	section > a > img {
+		width: 100%;
+		height: auto;
+		max-height: 90vh;
+		min-height: 200px;}
+	section > div {
+		height: auto;}
+	section:hover {
+		box-shadow: none;}
+}

@@ -1,0 +1,16 @@
+main {
+	width: 70%;
+    margin: 120px auto 80px;}
+    table {
+        margin: auto;
+        border-collapse: collapse;}
+        th, td {
+            border: 1px solid black;
+            padding: 10px 20px;
+            font-size: 18px;}
+
+.dark-mode {
+    background-color: black;}
+    .dark-mode main * {
+        color: white;
+        border-color: white;}

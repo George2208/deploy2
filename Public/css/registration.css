@@ -1,0 +1,66 @@
+* {
+    outline: none;
+}
+
+#form {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    width: 400px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+#form > input[type=password], #form > input[type=text], #form > input[type=email]{
+    border: thin solid black;
+    text-align: center;
+}
+
+#form > h1 {
+    grid-column: 1 / span 2;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#loginButton {
+    grid-column: 1 / span 2;
+    outline: none;
+    width: 100px;
+    margin: auto;
+	font-size: 15px;
+	border-radius: 7px;
+	padding: 5px 15px;
+    transition-duration: 0.5s;
+    transition-property: color border-color;
+}
+
+#loginButton:hover {
+    background-color: lightgrey;
+}
+
+.dark-mode {
+    background-color: black;
+}
+
+.dark-mode form {
+    border-color: white;
+}
+
+.dark-mode label, .dark-mode #form > h1{
+    color: white;
+}
+
+.dark-mode #form > input[type=password],
+.dark-mode #form > input[type=text],
+.dark-mode #form > input[type=email],
+.dark-mode #form > button,
+.dark-mode #form > select{
+    border: thin solid white;
+    color: white;
+}
+
+.dark-mode #form > button{
+    margin-top: 20px;}
+
+.dark-mode #form > button:hover {
+    color: black;}

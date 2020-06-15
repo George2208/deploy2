@@ -1,0 +1,177 @@
+main {
+	background-color: inherit;
+	width: 70%;
+	margin: 80px auto;}
+main > h1 {
+	text-align: center;
+	margin: 1rem 0px;}
+main > p {
+	text-align: justify;
+	margin: 20px auto;}
+	p::first-letter {
+		padding-left: 2rem;}
+main iframe {
+	display: block;
+	margin: auto;}
+main ul {
+	padding-left: 80px;}
+	main ul li {
+		text-align: justify;}
+main ol {
+	padding-left: 80px;}
+	main ol li {
+		text-align: justify;}
+main > table {
+	margin: auto;
+	border-collapse: collapse;}
+	main td, main th {
+		border: 1px solid black;
+		padding: 5px;
+		text-align: center;}
+	tr:nth-child(odd){
+		background-color: lightgrey;}
+main > div {
+	margin: 50px auto;
+	display: flex;
+	flex-direction: row;}
+	main > div > * {
+		width: 50%;
+		margin:auto;}
+.smth {
+	background-color: white;
+	border: none;}
+.dark-mode .smth {
+	background-color: black;}
+.dark-mode {
+	background-color: black;}
+	.dark-mode main p, .dark-mode main td, .dark-mode main th, .dark-mode main li, .dark-mode main h1 {
+		color: white;}
+	.dark-mode main td, .dark-mode main th {
+		border-color: white;}
+	.dark-mode main tr:nth-child(odd) {
+		background-color: #303030;}
+
+iframe, table {
+	max-width: 80vw;}
+
+@media only screen and (max-width: 1160px) {
+	main {
+		width: 90%;}
+}
+@media only screen and (max-width: 910px) {
+	main > div {
+		flex-direction: column-reverse;}
+		main > div > ol {
+			width: auto;}
+		main > div > iframe {
+			margin-top: 20px;
+			width: 100%;}
+}
+
+#commdiv {
+	background-color: lightgrey;
+	display: flex;
+	padding-bottom: 30px;
+	flex-direction: column;}
+	#commdiv form {
+		width: 70%;
+		padding: 18px;}
+		#commdiv form input {
+			outline: none;
+			font-size: 17px;
+			border-bottom: 1px dotted black;
+			width: 60%;}
+		#commdiv form button {
+			outline: none;
+			width: auto;
+			float: right;
+			font-size: 15px;
+			border-radius: 7px;
+			padding: 5px 15px;
+			border: 1px solid transparent;
+			transition-duration: 0.5s;
+			transition-property: all;}
+			#commdiv form button:hover {
+				background-color: grey;
+				color: white;}
+			#loginButton:hover {
+				background-color: lightgrey;
+			}
+	#container {
+		width: 90%;}
+		#container p::first-letter{
+			padding-left: 0;}
+		#container .div {
+			margin: auto;
+			padding: 5px;
+			background-color: darkgrey;
+			margin-bottom: 30px;
+			width: 90%;
+			display: flex;
+			flex-direction: column;	}
+			#container .div > div:first-child {
+				border-bottom: 1px solid black;
+				display: flex;
+				flex-direction: row;
+				text-align: center;
+				width: fit-content;}
+				#container .date {
+					padding-right: 10px;}
+				#container .username {
+					font-weight: bold;}
+			#container .comment {
+				padding-left: 10%;
+				margin-top: 10px;;}
+
+#hidebtn {
+	outline: none;
+	width: auto;
+	font-size: 15px;
+	border-radius: 7px;
+	padding: 5px 15px;
+	border: 1px solid transparent;
+	transition-duration: 0.5s;
+	transition-property: all;}
+	#hidebtn:hover {
+		background-color: grey;
+		color: white;}
+
+.dark-mode #commdiv {
+	background-color: black;
+}
+.dark-mode #commdiv input, .dark-mode #commdiv button{
+	color: white;
+}
+.dark-mode #commdiv form input, .dark-mode #container .div > div {
+	border-color: white;
+}
+.dark-mode #container .div {
+	background-color: black;
+	border: 1px solid grey;
+	border-radius: 10px;
+}
+.dark-mode #commdiv button {
+	border-color: white;
+}
+
+.dark-mode #commdiv button:hover {
+	color: black;
+	background-color: white;
+}
+
+.dark-mode .rate .upvote, .dark-mode .rate .downvote {
+	fill: white;
+}
+.rate {
+	display: flex;
+	flex-direction: row;
+	margin-top: 20px;
+	margin: 0 20px 0 auto;}
+	.rate > p {
+		margin: 0 20px 0 5px;}
+	#container .upvote:hover {
+		fill: green;
+		transform: scale(1.2);}
+	#container .downvote:hover {
+		fill: red;
+		transform: scale(1.2);}

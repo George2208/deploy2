@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+</head>
+<body>
+    <a href="/">Site</a>
+    <input id="command" type="text">
+    <button onclick="admin()">OK</button>
+    <ul>
+        <li>delusers: delete all users exxcept admin</li>
+        <li>delcomm: delete all comments</li>
+        <li>users: returns all users(in logs)</li>
+        <li>save: saves all users, comments and raitings in a json</li>
+        <li>logs: returns all server logs(registrations comments raitings etc.)</li>
+    </ul>
+    <script defer>
+        async function admin(){
+            const req = {
+                user: localStorage.getItem("username"),
+                pass: localStorage.getItem("password"),
+                command: document.getElementById("command").value
+            }
+            const res = await fetch("/admin",{
+                method: "POST",
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(req)
+            })
+            if(res.status!=200)
+                window.location.href = "html/index.html"
+            let x = await res.json()
+            console.log(x.res)
+        }admin()
+        document.getElementById("command").addEventListener("keydown",function(e){
+            if(e.key == "Enter"){
+                e.preventDefault()
+                admin()
+                document.getElementById("command").value=""
+            }
+        })
+    </script>
+</body>
+</html>

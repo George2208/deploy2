@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>VPN in a nutshell</title>
+	<link rel="shortcut icon" href="../img/Fav_white.png">
+	<link rel="stylesheet" type="text/css" href="../css/navbar.css">
+	<link rel="stylesheet" type="text/css" href="../css/pagestyle.css">
+	<script src="../js/scripts.js"></script>
+	<script defer src="../js/login.js"></script>
+	<script defer src="../js/comments.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+</head>
+<body>
+	<nav>
+		<button class="navmenu">Menu</button>
+		<ul>
+			<li><a href="../html/index.html"><svg><use href="#svg_home"></use></svg>Home</a></li>
+			<li><a href="#"><svg><use href="#svg_contact"></use></svg>Contact</a></li>
+			<li class="dropdown">
+				<button><svg><use href="#svg_more"></use></svg>More</button>
+				<div class="dropdowncontent">
+					<a href="../html/users.html">Users</a>
+					<a href="../html/update.html">Update profile</a>
+					<a href="../html/delete.html">Delete profile</a>
+				</div>
+			</li>
+			<li><button onclick="darkMode()"><svg><use href="#svg_darkmode"></use></svg>Dark-mode</button></li>
+		</ul>
+		<ul>
+			<li><button id="loginbutton"><svg><use href="#svg_login"></use></svg><p id="loginout">Login</p></button></li>
+			<li><a id="registrationbutton" href="../html/registration.html"><svg><use href="#svg_register"></use></svg><p>Registration</p></a></li>
+		</ul>
+	</nav>
+	<div id="loginwindow" class="runanim">
+		<h1>Login</h1>
+		<form id="loginform">
+			<label for="username">Your username:</label>
+			<input id="username" type="text" name="username" placeholder="Username" required>
+			<label for="password">Your password:</label>
+			<input id="password" type="password" name="password" placeholder="Password" required>
+		</form>
+		<div id="remembermediv">
+			<input id="rememberme" type="checkbox" name="rememberme">
+			<label for="rememberme">Remember me</label>
+		</div>
+		<button id="closeloginwindow">Close</button>
+		<button id="submitbutton" type="submit" name="submitlogin" form="loginform" value="Submit">Submit</button>
+		<ul>
+			<li><a href="registration.html">Create new account</a></li>
+			<li><a href="#">Password recovery</a></li>
+		</ul>
+	</div>
+	<main>
+		<h1>VPN in a nutshell</h1>
+		<p>A virtual private network (VPN) extends a private network across a public network and enables users to send and receive data across shared or public networks as if their computing devices were directly connected to the private network. Applications running on an end system (PC, smartphone etc.) across a VPN may therefore benefit from the functionality, security, and management of the private network. Encryption is a common, though not an inherent, part of a VPN connection.</p>
+		<p>VPN technology was developed to allow remote users and branch offices to access corporate applications and resources. To ensure security, the private network connection is established using an encrypted layered tunneling protocol, and VPN users use authentication methods, including passwords or certificates, to gain access to the VPN. In other applications, Internet users may secure their connections with a VPN to circumvent geo-restrictions and censorship or to connect to proxy servers to protect personal identity and location to stay anonymous on the Internet. Some websites, however, block access to known VPN technology to prevent the circumvention of their geo-restrictions, and many VPN providers have been developing strategies to get around these roadblocks.</p>
+		<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/_wQTRMBAvzg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<p>These days VPNs are really popular, but not for the reasons they were originally created. They originally were just a way to connect business networks together securely over the internet or allow you to access a business network from home. VPNs essentially forward all your network traffic to the network, which is where the benefits – like accessing local network resources remotely and bypassing Internet censorship – all come from. Most operating systems have integrated VPN support.</p>
+		<p>In very simple terms, a VPN connects your PC, smartphone, or tablet to another computer (called a server) somewhere on the internet, and allows you to browse the internet using that computer’s internet connection. So if that server is in a different country, it will appear as if you are coming from that country, and you can potentially access things that you couldn’t normally. You can use a VPN to:</p>
+		<ul>
+			<li>Access a Business Network While Traveling: VPNs are frequently used by business travelers to access their business’ network, including all its local network resources, while on the road. The local resources don’t have to be exposed directly to the Internet, which increases security.</li>
+			<li>Access Your Home Network While Travelling: You can also set up your own VPN to access your own network while travelling. This will allow you to access a Windows Remote Desktop over the Internet, use local file shares, and play games over the Internet as if you were on the same LAN (local area network).</li>
+			<li>Hide Your Browsing Activity From Your Local Network and ISP: If you’re using a public Wi-Fi connection, your browsing activity on non-HTTPS websites is visible to everyone neraby, if they know how to look. If you want to hide your browsing activity for a bit more privacy, you can connect to a VPN. The local network will only see a single, secure VPN connection. All the other traffic will travel over the VPN connection. While this can be used to bypass connection-monitoring by your Internet service provider, bear in mind that VPN providers may opt to log the traffic on their ends.</li>
+			<li>Access Geo-Blocked Websites: Whether you’re an American trying to access your Netflix account while travelling out of the country or you wish you could use American media sites like Netflix, Pandora, and Hulu, you’ll be able to access these region-restricted services if you connect to a VPN located in the USA.</li>
+			<li>Bypass Internet Censorship: Many Chinese people use VPNs to get around the Great Firewall of China and gain access to the entire Internet. (However, the Great Firewall has apparently started interfering with VPNs recently.)</li>
+			<li>Downloading Files: Yes, let’s be honest – many people use VPN connections to download files via BitTorrent. This can actually be useful even if you’re downloading completely legal torrents – if your ISP is throttling BitTorrent and making it extremely slow, you can use BitTorrent on a VPN to get faster speeds. The same is true for other types of traffic your ISP might interfere with (unless they interfere with VPN traffic itself.)</li>
+		</ul>
+		<div id="commdiv">
+			<form>
+				<input type="text" id="text" placeholder="Add a comment:">
+				<button id="btn">Send</button>
+			</form>
+			<div id="container"></div>
+			<button id="hidebtn">Hide comments</button>
+		</div>
+	</main>
+
+
+
+	<svg style="display: none;">
+		<path class="svgs" viewBox="0 0 16 16" id="svg_home" d="M16 9.226l-8-6.21-8 6.21v-2.532l8-6.21 8 6.21zM14 9v6h-4v-4h-4v4h-4v-6l6-4.5z"/>
+		<path class="svgs" viewBox="0 0 16 16" id="svg_contact" d="M11 10c-1 1-1 2-2 2s-2-1-3-2-2-2-2-3 1-1 2-2-2-4-3-4-3 3-3 3c0 2 2.055 6.055 4 8s6 4 8 4c0 0 3-2 3-3s-3-4-4-3z"/>
+		<path class="svgs" viewBox="0 0 16 16" id="svg_login" d="M11 0c-2.761 0-5 2.239-5 5 0 0.313 0.029 0.619 0.084 0.916l-6.084 6.084v3c0 0.552 0.448 1 1 1h1v-1h2v-2h2v-2h2l1.298-1.298c0.531 0.192 1.105 0.298 1.702 0.298 2.761 0 5-2.239 5-5s-2.239-5-5-5zM12.498 5.002c-0.828 0-1.5-0.672-1.5-1.5s0.672-1.5 1.5-1.5 1.5 0.672 1.5 1.5-0.672 1.5-1.5 1.5z"/>
+		<path class="svgs" viewBox="0 0 16 16" id="svg_register" d="M9 11.041v-0.825c1.102-0.621 2-2.168 2-3.716 0-2.485 0-4.5-3-4.5s-3 2.015-3 4.5c0 1.548 0.898 3.095 2 3.716v0.825c-3.392 0.277-6 1.944-6 3.959h14c0-2.015-2.608-3.682-6-3.959z"/>
+		<symbol class="svgs" viewBox="0 0 16 16" id="svg_darkmode">
+			<path d="M8 13c0.552 0 1 0.448 1 1v1c0 0.552-0.448 1-1 1s-1-0.448-1-1v-1c0-0.552 0.448-1 1-1zM8 3c-0.552 0-1-0.448-1-1v-1c0-0.552 0.448-1 1-1s1 0.448 1 1v1c0 0.552-0.448 1-1 1zM15 7c0.552 0 1 0.448 1 1s-0.448 1-1 1h-1c-0.552 0-1-0.448-1-1s0.448-1 1-1h1zM3 8c0 0.552-0.448 1-1 1h-1c-0.552 0-1-0.448-1-1s0.448-1 1-1h1c0.552 0 1 0.448 1 1zM12.95 11.536l0.707 0.707c0.39 0.39 0.39 1.024 0 1.414s-1.024 0.39-1.414 0l-0.707-0.707c-0.39-0.39-0.39-1.024 0-1.414s1.024-0.39 1.414 0zM3.050 4.464l-0.707-0.707c-0.391-0.391-0.391-1.024 0-1.414s1.024-0.391 1.414 0l0.707 0.707c0.391 0.391 0.391 1.024 0 1.414s-1.024 0.391-1.414 0zM12.95 4.464c-0.39 0.391-1.024 0.391-1.414 0s-0.39-1.024 0-1.414l0.707-0.707c0.39-0.391 1.024-0.391 1.414 0s0.39 1.024 0 1.414l-0.707 0.707zM3.050 11.536c0.39-0.39 1.024-0.39 1.414 0s0.391 1.024 0 1.414l-0.707 0.707c-0.391 0.39-1.024 0.39-1.414 0s-0.391-1.024 0-1.414l0.707-0.707z"></path>
+			<path d="M8 4c-2.209 0-4 1.791-4 4s1.791 4 4 4c2.209 0 4-1.791 4-4s-1.791-4-4-4zM8 10.5c-1.381 0-2.5-1.119-2.5-2.5s1.119-2.5 2.5-2.5 2.5 1.119 2.5 2.5-1.119 2.5-2.5 2.5z"></path>
+		</symbol>
+		<path class="svgs" viewBox="0 0 16 16" id="svg_more"  d="M8 15.5l7.5-7.5h-4.5v-8h-6v8h-4.5z"></path>
+		<path class="svgs" viewBox="0 0 475.092 475.092" id="svg_upvote" width="100vw" height="100vh" d="M442.829,265.532c9.328-14.089,13.986-29.598,13.986-46.538c0-19.607-7.225-36.637-21.687-51.117c-14.469-14.465-31.601-21.696-51.394-21.696h-50.251c9.134-18.842,13.709-37.117,13.709-54.816c0-22.271-3.34-39.971-9.996-53.105c-6.663-13.138-16.372-22.795-29.126-28.984C295.313,3.09,280.947,0,264.959,0c-9.712,0-18.274,3.521-25.697,10.566c-8.183,7.993-14.084,18.274-17.699,30.837c-3.617,12.559-6.521,24.6-8.708,36.116c-2.187,11.515-5.569,19.652-10.135,24.41c-9.329,10.088-19.511,22.273-30.551,36.547c-19.224,24.932-32.264,39.685-39.113,44.255H54.828c-10.088,0-18.702,3.574-25.84,10.706c-7.135,7.139-10.705,15.752-10.705,25.841v182.723c0,10.089,3.566,18.699,10.705,25.838c7.142,7.139,15.752,10.711,25.84,10.711h82.221c4.188,0,17.319,3.806,39.399,11.42c23.413,8.186,44.017,14.418,61.812,18.702c17.797,4.284,35.832,6.427,54.106,6.427h26.545h10.284c26.836,0,48.438-7.666,64.809-22.99c16.365-15.324,24.458-36.213,24.27-62.67c11.42-14.657,17.129-31.597,17.129-50.819c0-4.185-0.281-8.277-0.855-12.278c7.23-12.748,10.854-26.453,10.854-41.11C445.399,278.379,444.544,271.809,442.829,265.532z M85.949,396.58c-3.616,3.614-7.898,5.428-12.847,5.428c-4.95,0-9.233-1.813-12.85-5.428c-3.615-3.613-5.424-7.897-5.424-12.85c0-4.948,1.805-9.229,5.424-12.847c3.621-3.617,7.9-5.425,12.85-5.425c4.949,0,9.231,1.808,12.847,5.425c3.617,3.617,5.426,7.898,5.426,12.847C91.375,388.683,89.566,392.967,85.949,396.58z M414.145,242.419c-4.093,8.754-9.186,13.227-15.276,13.415c2.854,3.237,5.235,7.762,7.139,13.562c1.902,5.807,2.847,11.087,2.847,15.848c0,13.127-5.037,24.455-15.126,33.969c3.43,6.088,5.141,12.658,5.141,19.697c0,7.043-1.663,14.038-4.996,20.984c-3.327,6.94-7.851,11.938-13.559,14.982c0.951,5.709,1.423,11.04,1.423,15.988c0,31.785-18.274,47.678-54.823,47.678h-34.536c-24.94,0-57.483-6.943-97.648-20.841c-0.953-0.38-3.709-1.383-8.28-2.998s-7.948-2.806-10.138-3.565c-2.19-0.767-5.518-1.861-9.994-3.285c-4.475-1.431-8.087-2.479-10.849-3.142c-2.758-0.664-5.901-1.283-9.419-1.855c-3.52-0.571-6.519-0.855-8.993-0.855h-9.136V219.285h9.136c3.045,0,6.423-0.859,10.135-2.568c3.711-1.714,7.52-4.283,11.421-7.71c3.903-3.427,7.564-6.805,10.992-10.138c3.427-3.33,7.233-7.517,11.422-12.559c4.187-5.046,7.47-9.089,9.851-12.135c2.378-3.045,5.375-6.949,8.992-11.707c3.615-4.757,5.806-7.613,6.567-8.566c10.467-12.941,17.795-21.601,21.982-25.981c7.804-8.182,13.466-18.603,16.987-31.261c3.525-12.66,6.427-24.604,8.703-35.832c2.282-11.229,5.903-19.321,10.858-24.27c18.268,0,30.453,4.471,36.542,13.418c6.088,8.945,9.134,22.746,9.134,41.399c0,11.229-4.572,26.503-13.71,45.821c-9.134,19.32-13.698,34.5-13.698,45.539h100.495c9.527,0,17.993,3.662,25.413,10.994c7.426,7.327,11.143,15.843,11.143,25.553C420.284,225.943,418.237,233.653,414.145,242.419z"/>
+		<path class="svgs" viewBox="0 0 475.092 475.092" id="svg_downvote" width="100vw" height="100vh" d="M442.822,209.562c1.715-6.283,2.57-12.847,2.57-19.702c0-14.655-3.621-28.361-10.852-41.112c0.567-3.995,0.855-8.088,0.855-12.275c0-19.223-5.716-36.162-17.132-50.819v-1.427c0.191-26.075-7.946-46.632-24.414-61.669C377.387,7.521,355.831,0,329.186,0h-31.977c-19.985,0-39.02,2.093-57.102,6.28c-18.086,4.189-39.304,10.468-63.666,18.842c-22.08,7.616-35.211,11.422-39.399,11.422H54.821c-10.088,0-18.702,3.567-25.84,10.704C21.845,54.387,18.276,63,18.276,73.085v182.728c0,10.089,3.566,18.698,10.705,25.837c7.142,7.139,15.752,10.705,25.84,10.705h78.228c6.849,4.572,19.889,19.324,39.113,44.255c11.231,14.661,21.416,26.741,30.551,36.265c3.612,3.997,6.564,10.089,8.848,18.271c2.284,8.186,3.949,16.228,4.998,24.126c1.047,7.898,3.475,16.516,7.281,25.837c3.806,9.329,8.944,17.139,15.415,23.422c7.423,7.043,15.985,10.561,25.697,10.561c15.988,0,30.361-3.087,43.112-9.274c12.754-6.184,22.463-15.845,29.126-28.981c6.663-12.943,9.996-30.646,9.996-53.103c0-17.702-4.568-35.974-13.702-54.819h50.244c19.801,0,36.925-7.23,51.394-21.7c14.469-14.462,21.693-31.497,21.693-51.103C456.809,239.165,452.15,223.652,442.822,209.562z M85.942,104.219c-3.616,3.615-7.898,5.424-12.847,5.424c-4.95,0-9.233-1.805-12.85-5.424c-3.615-3.621-5.424-7.898-5.424-12.851c0-4.948,1.809-9.231,5.424-12.847c3.621-3.617,7.9-5.424,12.85-5.424c4.949,0,9.231,1.807,12.847,5.424c3.617,3.616,5.426,7.898,5.426,12.847C91.368,96.317,89.56,100.598,85.942,104.219z M409.135,281.377c-7.42,7.33-15.886,10.992-25.413,10.992H283.227c0,11.04,4.564,26.217,13.698,45.535c9.138,19.321,13.71,34.598,13.71,45.829c0,18.647-3.046,32.449-9.134,41.395c-6.092,8.949-18.274,13.422-36.546,13.422c-4.951-4.948-8.572-13.045-10.854-24.276c-2.276-11.225-5.185-23.168-8.706-35.83c-3.519-12.655-9.18-23.079-16.984-31.266c-4.184-4.373-11.516-13.038-21.982-25.98c-0.761-0.951-2.952-3.806-6.567-8.562c-3.614-4.757-6.613-8.658-8.992-11.703c-2.38-3.046-5.664-7.091-9.851-12.136c-4.189-5.044-7.995-9.232-11.422-12.565c-3.427-3.327-7.089-6.708-10.992-10.137c-3.901-3.426-7.71-5.996-11.421-7.707c-3.711-1.711-7.089-2.566-10.135-2.566h-9.136V73.092h9.136c2.474,0,5.47-0.282,8.993-0.854c3.518-0.571,6.658-1.192,9.419-1.858c2.76-0.666,6.377-1.713,10.849-3.14c4.476-1.425,7.804-2.522,9.994-3.283c2.19-0.763,5.568-1.951,10.138-3.571c4.57-1.615,7.33-2.613,8.28-2.996c40.159-13.894,72.708-20.839,97.648-20.839h36.542c16.563,0,29.506,3.899,38.828,11.704c9.328,7.804,13.989,19.795,13.989,35.975c0,4.949-0.479,10.279-1.423,15.987c5.708,3.046,10.231,8.042,13.559,14.987c3.333,6.945,4.996,13.944,4.996,20.985c0,7.039-1.711,13.61-5.141,19.701c10.089,9.517,15.126,20.839,15.126,33.974c0,4.759-0.948,10.039-2.847,15.846c-1.899,5.808-4.285,10.327-7.139,13.562c6.091,0.192,11.184,4.665,15.276,13.422c4.093,8.754,6.14,16.468,6.14,23.127C420.277,265.525,416.561,274.043,409.135,281.377z"/>
+		<path class="svgs" viewBox="0 0 16 16" id="svg_delete" d="M3 16h10l1-11h-12zM10 2v-2h-4v2h-5v3l1-1h12l1 1v-3h-5zM9 2h-2v-1h2v1z"></path>
+	</svg>
+</body>
+</html>

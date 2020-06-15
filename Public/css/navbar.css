@@ -1,0 +1,251 @@
+@font-face {
+  font-family: customfont;
+  src: url(fontfile.ttf);
+}
+
+div {
+  font-family: customfont;
+}
+
+* {
+	font-family: customfont;
+	background-color: inherit;
+	margin: 0px;
+	padding: 0px;
+	border: 0px;}
+
+nav {
+	z-index: 1;
+	top: 0px;
+	width: 100%;
+	position: fixed;
+	background-color: darkgrey;
+	display: flex;
+	justify-content: space-between;
+	height: 60px;}
+	nav > ul {
+		list-style-type: none;
+		background-color: inherit;
+		display: flex;
+		height: inherit;}
+		nav > ul * {
+			font-size: 14px;}
+		#loginbutton > p{
+			display: inline;}
+		nav > ul > li {
+			background-color: inherit;
+			height: inherit;
+			border-right: 1px solid lightgrey;}
+			nav > ul > li a:hover, nav button:hover {
+				background-color: grey;
+				color: white;}
+			nav > :nth-child(3) > li {
+				border-right: 0px;
+				border-left: 1px solid lightgrey;}
+			nav > ul > li a, nav button{
+				transition-property: color, background-color;
+				transition-duration: 0.5s;
+				width: 100%;
+				text-decoration: none;
+				background-color: inherit;
+				height: inherit;
+				color: black;
+				display: table-cell;
+				vertical-align: middle;
+				padding: 0px 20px;
+				outline:0px;}
+	nav:after {
+		pointer-events: none;
+		z-index: 1;
+		position: absolute;
+		content: "";
+		left: 0px;
+		top: 60px;
+		height: 20px;
+		width: 100%;
+		background-image: linear-gradient(white, transparent);}
+
+nav .dropdowncontent {
+	overflow: hidden;
+	max-height: 0px;
+	background-color: inherit;
+	display: flex;
+	flex-direction: column;
+	transition-property: all;
+	transition-duration: 0.5s;
+	text-align: center;
+	border-radius: 0px 0px 5px 5px;}
+	nav .dropdown > button:focus ~ .dropdowncontent {
+		max-height: 120px;
+		border-radius: 0px 0px 15px 15px;}
+		nav .dropdowncontent a {
+			z-index: 2;
+			box-sizing: border-box;
+			border-top: 1px solid lightgrey;
+			padding: 0.5rem 10px;}
+			nav .dropdowncontent > a:last-child {
+				border-radius: 0px 0px 15px 15px;
+				border-bottom: 1px solid lightgrey}
+
+nav svg {
+	fill: black;
+	transition-property: fill;
+	transition-duration: 0.5s;
+	width: 16px;
+	height: 16px;
+	padding-right: 10px;
+	top: .125em;
+	position: relative;}
+
+#loginbutton > p, #registrationbutton > p {
+	display: inline;}
+
+#loginwindow {
+	border: 1px solid black;
+	z-index: 2;
+	background-color: white;
+	box-shadow: 0 0 10px 10px white;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 75%;
+	max-width: 500px;
+	overflow: hidden;
+	position: fixed;
+	display: none;
+	border-radius: 10px;}
+	#loginwindow * {
+		text-align: center;}
+	#loginwindow h1 {
+		margin-top: 20px;}
+	#loginwindow > form {
+		width: 80%;
+		margin: 40px auto 10px;
+		display: grid;
+		grid-gap: 10px;
+		grid-template-columns: 40% 60%;}
+		#loginwindow > form > * {
+			padding: 5px;
+			font-size: 18px;}
+		#loginwindow > form > input {
+			border: 1px dotted grey;}
+		#loginwindow > form > input:focus {
+			outline: 0px;
+			box-shadow: 0 0 3px 2px grey;}
+	#remembermediv {
+		margin: auto;
+		display: block;
+		margin-bottom: 10px;}
+		#remembermediv > input[type=checkbox]{
+			vertical-align: middle;}
+		#remembermediv > label:hover {
+			color: grey;}
+	#loginwindow button {
+		float: right;
+		margin-right: 20px;
+		padding: 5px 10px;
+		border-radius: 10px;
+		outline: 0px;
+		font-size: 18px;}
+		#loginwindow button:hover {
+			background-color: lightgrey;
+			color: black;}
+	#loginwindow ul {
+		clear: both;
+		display: flex;
+		margin-top: 50px;}
+		#loginwindow > ul > li {
+			list-style-type: none;
+			padding: 10px;
+			width: 50%;}
+			#loginwindow a {
+				text-decoration: none;
+				color: black;}
+				#loginwindow a:hover {
+					color: grey;}
+
+.dark-mode nav {
+	background-color: #303030;}
+.dark-mode nav * {
+	transition-property: none;
+	color: white;
+	fill: white;}
+	.dark-mode nav .dropdowncontent {
+		transition-property: max-height;}
+.dark-mode nav:after {
+	background-image: linear-gradient(black, transparent);}
+.dark-mode #loginwindow {
+	border: 1px solid white;
+	background-color: #202020;
+	box-shadow: 0 0 10px 10px #202020;}
+	.dark-mode #loginwindow * {
+		color: white;}
+
+.navmenu {
+	display: none;
+	position: absolute;
+	height: 60px;
+	left: 0px;
+	top: 0px;}
+
+.runanim {
+	animation-name: my-animation;
+	animation-duration: 0.8s;}
+
+@keyframes my-animation {        
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+@media only screen and (max-width: 770px) {
+	.navmenu {
+		display: table-cell;}
+	nav {
+		border-bottom-left-radius: 15px;
+		padding-top: 60px;
+		overflow: hidden;
+		border: 1px solid lightgrey;
+		flex-direction: column;
+		height: fit-content;
+		width: fit-content;
+		right: 0px;
+		max-height: 60px;
+		box-sizing: border-box;}
+		nav > :nth-child(3) > li {
+			border-left: 0px;}
+		nav > ul {
+			height: fit-content;	
+			flex-direction: column;
+			overflow: hidden;}
+			nav > ul > li {
+				height: 60px;
+				border-top: 1px solid lightgrey;}
+				nav > ul > li a{
+					display: block;
+					padding: 20px 0px 0px;
+					height: 60px;
+					text-align: center;}
+	nav .dropdown > .dropdowncontent {
+		max-height: 0px;}
+	nav:hover .dropdown:hover > .dropdowncontent {
+		max-height: 120px;}
+	.dropdown {
+		height: auto;}
+		.dropdown > button {
+			height: 60px;}
+	nav .dropdown > button:focus ~ .dropdowncontent {
+		border-radius: 0px;}
+		.dropdowncontent > a {
+			height: 40px;}
+			nav .dropdowncontent > a:last-child {
+				border-radius: 0px;}
+				.dropdowncontent > a:last-child {
+					border-radius: 0px;}
+	nav:after {
+		content: none;}
+	nav:hover {
+		max-height: fit-content;}
+	.dark-mode nav a, .dark-mode nav button {
+		box-sizing: border-box;
+	}
+}
